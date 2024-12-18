@@ -1,0 +1,18 @@
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: database
+    # image -> In the Dockerfile
+    volumes:
+      - ../users/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - ../load/diabetes_012_health_indicators_BRFSS2015.csv:/var/lib/mysql-files/diabetes_dataset.csv
+      - ../load/load.sql:/docker-entrypoint-initdb.d/load.sql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: root # not secure
+    command: --secure-file-priv=/var/lib/mysql-files
