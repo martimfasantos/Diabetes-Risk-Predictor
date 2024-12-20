@@ -6,7 +6,7 @@ USE db;
 
 -- Creating the table to hold the CSV data
 CREATE TABLE diabetes_data (
-    Diabetes_binary TINYINT, -- 0 or 1 (Target variable)
+    Diabetes TINYINT, -- 0, 1, or 2 (Target variable)
     HighBP TINYINT, -- 0 or 1
     HighChol TINYINT, -- 0 or 1
     CholCheck TINYINT, -- 0 or 1

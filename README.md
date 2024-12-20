@@ -13,7 +13,7 @@ cd ml-project/
 pip install -r requirements.txt
 ```
 
-# Phase 1 : Data Engineering
+# Module 1 : Data Engineering
 
 ## Step 1: Build and Run the Docker Image
 
@@ -102,4 +102,8 @@ SELECT * FROM diabetes_data LIMIT 10;
 ```
 
 *Note:* I used Docker Desktop to assist with the Docker framework and overall tasks. It provides a user-friendly interface for managing Docker containers and images, making it easier to monitor, start, stop, and troubleshoot containers.
+
+---
+
+# Module 2 : Data Science
 
