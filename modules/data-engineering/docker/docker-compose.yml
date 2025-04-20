@@ -7,7 +7,7 @@ services:
     # image -> In the Dockerfile
     volumes:
       - ../users/setup.sql:/docker-entrypoint-initdb.d/setup.sql
-      - ../load/diabetes_012_health_indicators_BRFSS2015.csv:/var/lib/mysql-files/diabetes_dataset.csv
+      - ../load/diabetes_binary_5050split_health_indicators_BRFSS2015.csv:/var/lib/mysql-files/diabetes_dataset.csv
       - ../load/load.sql:/docker-entrypoint-initdb.d/load.sql
     restart: always
     ports:
